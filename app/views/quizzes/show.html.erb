@@ -1,0 +1,22 @@
+<h1>Quiz</h1>
+
+<h5>
+Started at: <%= @quiz_session.started_at %>
+</h5>
+
+<div style="margin-top: 4em;">
+  <h3>Question:</h3>
+  <h4>
+  <%= @quiz_session.current_question.question.question %>
+  </h4>
+
+  <form id="form-question">
+    <input type="text" size="100" style="padding:4px 7px;" id="input-answer"/>
+    <button type="button" class="btn btn-primary">Submit</button>
+  </form>
+  
+</div>
+
+<script type="text/javascript">
+  $('#input-answer').focus();
+</script>
